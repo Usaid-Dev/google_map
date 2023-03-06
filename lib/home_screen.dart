@@ -11,24 +11,53 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final Completer<GoogleMapController> _controller = Completer();
+  Completer<GoogleMapController> _controller = Completer();
 
-  static const CameraPosition _kGooglePlex = CameraPosition(
+  static final CameraPosition _kGooglePlex = const CameraPosition(
     target: LatLng(
-      37.42796133580644,
-      -122.085749655962,
+      24.88453,
+      67.07886,
     ),
-    zoom: 14.4746,
+    zoom: 15,
   );
+
+  List<Marker> _marker = [];
+
+  List<Marker> _list = const [
+    Marker(
+      markerId: MarkerId('1'),
+      position: LatLng(
+        24.88453,
+        67.07886,
+      ),
+      infoWindow: InfoWindow(
+        title: 'My current losition',
+      ),
+    ),
+    Marker(
+      markerId: MarkerId('2'),
+      position: LatLng(
+        24.87049,
+        67.05908,
+      ),
+      infoWindow: InfoWindow(
+        title: 'Tariq Road',
+      ),
+    ),
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _marker.addAll(_list);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
         initialCameraPosition: _kGooglePlex,
-        mapType: MapType.normal,
-        myLocationEnabled: true,
-        compassEnabled: true,
+        markers: Set<Marker>.of(_marker),
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
