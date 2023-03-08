@@ -55,12 +55,32 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GoogleMap(
-        initialCameraPosition: _kGooglePlex,
-        markers: Set<Marker>.of(_marker),
-        onMapCreated: (GoogleMapController controller) {
-          _controller.complete(controller);
+      body: SafeArea(
+        child: GoogleMap(
+          initialCameraPosition: _kGooglePlex,
+          markers: Set<Marker>.of(_marker),
+          onMapCreated: (GoogleMapController controller) {
+            _controller.complete(controller);
+          },
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          GoogleMapController controller = await _controller.future;
+          controller.animateCamera(
+            CameraUpdate.newCameraPosition(
+              const CameraPosition(
+                target: LatLng(
+                  24.88453,
+                  67.07886,
+                ),
+                zoom: 14,
+              ),
+            ),
+          );
+          setState(() {});
         },
+        child: const Icon(Icons.location_disabled_outlined),
       ),
     );
   }
