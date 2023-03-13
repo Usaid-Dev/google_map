@@ -11,9 +11,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Completer<GoogleMapController> _controller = Completer();
+  final Completer<GoogleMapController> _controller = Completer();
 
-  static final CameraPosition _kGooglePlex = const CameraPosition(
+  static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(
       24.88453,
       67.07886,
@@ -21,9 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
     zoom: 15,
   );
 
-  List<Marker> _marker = [];
+  final List<Marker> _marker = [];
 
-  List<Marker> _list = const [
+  final List<Marker> _list = const [
     Marker(
       markerId: MarkerId('1'),
       position: LatLng(

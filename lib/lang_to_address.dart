@@ -35,13 +35,11 @@ class _ConvertLatLangToAddressState extends State<ConvertLatLangToAddress> {
 
               setState(
                 () {
-                  stAddress = locations.last.latitude.toString() +
-                      " " +
-                      locations.last.longitude.toString();
+                  stAddress =
+                      "${locations.last.latitude} ${locations.last.longitude}";
 
-                  stAdd = placemarks.reversed.last.country.toString() +
-                      " " +
-                      placemarks.reversed.last.locality.toString();
+                  stAdd =
+                      "${placemarks.reversed.last.country} ${placemarks.reversed.last.locality}";
                 },
               );
             },
