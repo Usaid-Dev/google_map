@@ -34,14 +34,10 @@ dependencies:
   geocoding: ^2.0.5
   geolocator: ^9.0.2
   google_maps_flutter: ^2.2.4
+  http: ^0.13.5
+  uuid: ^3.0.7
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
