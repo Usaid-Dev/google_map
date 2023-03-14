@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
+  custom_info_window: ^1.0.1
   flutter:
     sdk: flutter
   geocoding: ^2.0.5
