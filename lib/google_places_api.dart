@@ -13,7 +13,7 @@ class GooglePlacesApiScreen extends StatefulWidget {
 }
 
 class _GooglePlacesApiScreenState extends State<GooglePlacesApiScreen> {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   var uuid = const Uuid();
 

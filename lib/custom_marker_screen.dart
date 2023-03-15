@@ -8,7 +8,7 @@ class CustomMarkerScreen extends StatefulWidget {
   const CustomMarkerScreen({Key? key}) : super(key: key);
 
   @override
-  _CustomMarkerScreenState createState() => _CustomMarkerScreenState();
+  State<CustomMarkerScreen> createState() => _CustomMarkerScreenState();
 }
 
 class _CustomMarkerScreenState extends State<CustomMarkerScreen> {

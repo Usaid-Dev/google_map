@@ -10,7 +10,7 @@ class CustomMarkerInfoWindow extends StatefulWidget {
 }
 
 class _CustomMarkerInfoWindowState extends State<CustomMarkerInfoWindow> {
-  CustomInfoWindowController _customInfoWindowController =
+  final CustomInfoWindowController _customInfoWindowController =
       CustomInfoWindowController();
 
   final List<Marker> _markers = <Marker>[];
