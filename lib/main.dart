@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_map/polyline_screen.dart';
+import 'network_image_marker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PolylineScreen(),
+      home: const NetworkImageMarker(),
     );
   }
 }
