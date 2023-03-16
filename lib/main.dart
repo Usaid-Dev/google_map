@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'network_image_marker.dart';
+import 'package:google_map/style_map_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NetworkImageMarker(),
+      home: const StyleGoogleMapScreen(),
     );
   }
 }
