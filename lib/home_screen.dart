@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
         67.07886,
       ),
       infoWindow: InfoWindow(
-        title: 'My current losition',
+        title: 'My current location',
       ),
     ),
     Marker(

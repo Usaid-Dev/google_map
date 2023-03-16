@@ -18,8 +18,8 @@ class _NetworkImageMarkerState extends State<NetworkImageMarker> {
 
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(
-      33.738045,
-      73.084488,
+      24.8825,
+      67.0694,
     ),
     zoom: 14,
   );
@@ -71,7 +71,7 @@ class _NetworkImageMarkerState extends State<NetworkImageMarker> {
             resizedImageMarker,
           ),
           infoWindow: InfoWindow(
-            title: 'Title of marker$i',
+            title: 'Title of marker $i',
           ),
         ),
       );
